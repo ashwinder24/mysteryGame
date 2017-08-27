@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="../public/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  
+  
+<header>
+         <h1>Mystery Word</h1>
+         <h3>You have {{guesses}} guesses left</h3>
+</header>
+
+
+
+<main>
+
+<div class="display">
+
+     {{#display}}
+        {{.}}
+     {{/display}}
+
+</div>
+
+<div class="guess">
+ 
+       <form action="/" method="POST">
+       <p></p>
+       Guess: <input maxlength="1" type="text" name="guess" value="" placeholder="Enter 1 Letter Here">
+       <button type="submit" name="button">Make a Guess</button>
+       </form>
+  
+</div>
+
+<div class="letters">
+        <h1>Letters Guessed</h1>
+        {{#letter}}
+            {{.}}
+        {{/letter}}
+</div>        
+  
+
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
